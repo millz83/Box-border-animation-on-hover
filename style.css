@@ -1,0 +1,87 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: tan;
+}
+
+.wrapper {
+    width:1170px;
+    margin:10% auto;
+    
+}
+
+.box {
+    cursor: pointer;
+   width:24%;
+   height:auto;
+   float:left;
+    color:#262626;
+    position: relative;
+    display:block;
+    overflow: hidden;
+    padding:35px;
+    text-align: center;
+    margin:0 15px;
+}
+
+.box h3 {
+    margin:0;
+    text-transform: uppercase;
+    font-size:25px;
+}
+
+.box p{
+    font-size:12px;
+}
+
+.box:before {
+    position: absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height:4px;
+    width:100%;
+    border-bottom:4px solid transparent;
+    border-left: 4px solid transparent;
+    transform:translateX(100%);
+    box-sizing: border-box;
+
+}
+
+.box:after {
+    position: absolute;
+    content:'';
+    top:0;
+    left:0;
+    height:4px;
+    width:100%;
+    border-top:4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform:translateX(-100%);
+
+}
+
+
+.box:hover:before {
+ border-color:teal;
+ height:100%;
+ transform:translateX(0);
+ transition: .3s transform linear, .3s height linear .3s;
+}
+
+
+
+.box:hover:after {
+    border-color:teal;
+    height:100%;
+    transform:translateX(0);
+    transition: .3s transform linear .3s, .3s height linear .5s;
+   }
+
+.box:hover {
+    box-shadow: 0px 5px 15px rgba(0,0,0,.5);
+    transition:.8s;
+}
+
+
+
